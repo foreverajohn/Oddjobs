@@ -1,0 +1,89 @@
+$color-primary: #1A1B41;
+$color-secondary: #BAFF29;
+$color-pale: #F1FFE7;
+$color-mid: #C2E7DA;
+$color-dark: #6290C3;
+$color-black-transparent: rgba(0, 0, 0, 0.5);
+
+$body-font: "Open Sans", sans-serif;
+$header-font: "Lobster", cursive;
+
+body {
+    font-family: $body-font;
+}
+  
+h1, h2, h3 {
+    font-family: $header-font; 
+}
+
+header, nav {
+    h2 {
+        color: $color-pale;
+    }
+}
+
+h2 {
+    color: $color-primary;
+}
+
+#title {
+    font-size: 25px;
+}
+
+.navbar-dark {
+    background-color: $color-dark;
+}
+
+.row-content {
+    padding: 10px 0px;
+    border-bottom: 1px ridge;
+}
+
+.site-footer {
+    margin-top: 20px;
+    background-image: linear-gradient($color-dark, $color-pale);
+    padding: 20px 0;
+}
+  
+.card-title, .card-subtitle {
+    a {
+        text-decoration: none;
+    }
+    
+}
+
+.needCarousel {
+    background: #EEE;
+  }
+  
+  .carousel-cell {
+    width: 300px;
+    margin-right: 10px;
+    background: $color-mid;
+    border-radius: 5px;
+  }
+  
+  .carousel-cell.is-selected {
+    background: $color-pale;
+  }
+  
+  /* cell number */
+  .carousel-cell:before {
+    display: block;
+    text-align: center;
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+
+  /* position dots up a bit */
+.flickity-page-dots {
+    bottom: 3px;
+  }
+  /* dots are lines */
+  .flickity-page-dots .dot {
+    height: 4px;
+    width: 40px;
+    margin: 0;
+    border-radius: 0;
+  }

@@ -36,6 +36,75 @@
             </div>
         </nav>
 
+        <div id="loginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Login</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-12">
+                                        <label class="sr-only" for="loginEmail">Email address</label>
+                                        <input type="email"class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                                    </div>
+                                    <div class="form-group col-12">
+                                        <label class="sr-only" for="loginPassword">Password</label>
+                                        <input type="password"class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Remember me</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button> 
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="postModal" class="modal fade" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Create Post</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-12">
+                                        <label class="sr-only" for="postTitle">Post Title</label>
+                                        <input type="text"class="form-control form-control-sm" id="postTitle" placeholder="An interesting title">
+                                    </div>
+                                    <div class="form-group col-12">
+                                        <label class="sr-only" for="postDescription">Description</label>
+                                        <textarea type="text"class="form-control form-control-sm" id="postDescription" placeholder="Describe your needs/offer">
+                                        </textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary btn-sm ml-1">Post</button> 
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <header class="jumbotron jumbotron-fluid">
             <form class="form">
                 <div class="form-group row align-self-center">
@@ -56,12 +125,12 @@
         </header>
 
         
-        <div class="container text-center"><h2>What's needed</h2></div>
+        <div class="container mx-auto text-center"><h2>What's in Need</h2></div>
         <div class="needCarousel mb-3 py-3" data-flickity='{ "groupCells": true }'>
             <div class="carousel-cell">
                 <div class="card">
                     <div class="card-header">
-                        <h5><a href="#">Plumber needed!</a></h5>
+                        <h5><a href="post.html">Plumber needed!</a></h5>
                         <p class="text-muted">by <a href="#">mar1o360</a></p>
                     </div>
                     <div class="card-body">
@@ -138,6 +207,103 @@
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto text-center"><h2>What's in Offer</h2></div>
+        <div class="needCarousel mb-3 py-3" data-flickity='{ "groupCells": true }'>
+            <div class="carousel-cell">
+                <div class="card">
+                    <div class="card-header">
+                        <h5><a href="post.html">Plumber needed!</a></h5>
+                        <p class="text-muted">by <a href="#">mar1o360</a></p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-justify">Need some help fixing a couple of leaks under my kitchen sink. Will pay more if you come now!</p>
+                    </div>
+                    <footer class="card-footer">    
+                        <p class="card-text"><small class="text-muted">U: <i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i> P: <i class="fa fa-usd" aria-hidden="true"></i> 3 mins ago</small></p>
+                    </footer>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <div class="card">
+                    <div class="card-header">
+                        <h5><a href="#">Need help on house cleaning</a></h5>
+                        <p class="text-muted">by <a href="#">luigi420</a></p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-justify">Selling some stuff around the house and I need some help doing some cleaning on the garage and basement.</p>
+                    </div>
+                    <footer class="card-footer">    
+                        <p class="card-text"><small class="text-muted">U: <i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i> P: <i class="fa fa-usd" aria-hidden="true"></i> 4 mins ago</small></p>
+                    </footer>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Card 1</h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 4 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Card 1</h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Card 1</h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Card 1</h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Card 1</h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Card 1</h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 text-center">
+                    <h2>Featured Oddjobbers</h2>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <h2>Featured Clients</h2>
                 </div>
             </div>
         </div>

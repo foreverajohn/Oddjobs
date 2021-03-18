@@ -1,8 +1,11 @@
 $(function() {
-  $('.needCarousel').flickity({
+  $(".needCarousel, .offerCarousel").flickity({
     // options
     cellAlign: 'left',
-    contain: true
+    contain: true,
+    freeScroll: true,
+    prevNextButtons: false,
+    pageDots: false,
+    autoPlay: true
   });
 });
-

@@ -1,11 +1,17 @@
 body {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden; }
 
 h1, h2, h3 {
   font-family: "Lobster", cursive; }
 
-header h2, nav h2 {
-  color: #F1FFE7; }
+.navbar-dark {
+  background-color: #0046a4; }
+  .navbar-dark div {
+    color: #F1FFE7; }
+    .navbar-dark div a, .navbar-dark div h2 {
+      color: #F1FFE7;
+      text-decoration: none; }
 
 h2 {
   color: #1A1B41; }
@@ -13,29 +19,34 @@ h2 {
 #title {
   font-size: 25px; }
 
-.navbar-dark {
-  background-color: #6290C3; }
-
 .row-content {
   padding: 10px 0px;
   border-bottom: 1px ridge; }
 
 .site-footer {
   margin-top: 20px;
-  background-image: linear-gradient(#6290C3, #F1FFE7);
-  padding: 20px 0; }
+  background-color: #0046a4;
+  padding: 20px 0;
+  color: #F1FFE7; }
 
 .card-title a, .card-subtitle a {
   text-decoration: none; }
 
-.needCarousel {
-  background: #EEE; }
+#searchOption {
+  width: 130px; }
+
+.needCarousel, .offerCarousel {
+  background: transparent; }
 
 .carousel-cell {
-  width: 300px;
+  width: 250px;
   margin-right: 10px;
-  background: #C2E7DA;
   border-radius: 5px; }
+  .carousel-cell .card {
+    height: 300px;
+    width: 250px; }
+    .carousel-cell .card .card-header {
+      height: 100px; }
 
 .carousel-cell.is-selected {
   background: #F1FFE7; }
@@ -50,11 +61,11 @@ h2 {
 
 /* position dots up a bit */
 .flickity-page-dots {
-  bottom: 3px; }
+  bottom: 5px; }
 
 /* dots are lines */
 .flickity-page-dots .dot {
   height: 4px;
-  width: 40px;
+  width: 30px;
   margin: 0;
   border-radius: 0; }

@@ -1,25 +1,32 @@
 $color-primary: #1A1B41;
 $color-secondary: #BAFF29;
 $color-pale: #F1FFE7;
-$color-mid: #C2E7DA;
-$color-dark: #6290C3;
+$color-mid: #ffbf20;
+$color-dark: #0046a4;
 $color-black-transparent: rgba(0, 0, 0, 0.5);
+
 
 $body-font: "Open Sans", sans-serif;
 $header-font: "Lobster", cursive;
 
 body {
     font-family: $body-font;
+    overflow-x: hidden;
 }
   
 h1, h2, h3 {
     font-family: $header-font; 
 }
 
-header, nav {
-    h2 {
+.navbar-dark {
+    background-color: $color-dark;
+    div {
         color: $color-pale;
-    }
+        a, h2 {
+            color: $color-pale;
+            text-decoration: none;
+        }
+    }    
 }
 
 h2 {
@@ -30,10 +37,6 @@ h2 {
     font-size: 25px;
 }
 
-.navbar-dark {
-    background-color: $color-dark;
-}
-
 .row-content {
     padding: 10px 0px;
     border-bottom: 1px ridge;
@@ -41,9 +44,11 @@ h2 {
 
 .site-footer {
     margin-top: 20px;
-    background-image: linear-gradient($color-dark, $color-pale);
+    background-color: #0046a4;
     padding: 20px 0;
+    color: $color-pale;
 }
+
   
 .card-title, .card-subtitle {
     a {
@@ -52,38 +57,48 @@ h2 {
     
 }
 
-.needCarousel {
-    background: #EEE;
-  }
+#searchOption {
+    width: 130px;
+}
+
+.needCarousel, .offerCarousel {
+    background: transparent;
+}
   
-  .carousel-cell {
-    width: 300px;
+.carousel-cell {
+    width: 250px;
     margin-right: 10px;
-    background: $color-mid;
     border-radius: 5px;
-  }
-  
-  .carousel-cell.is-selected {
+    .card {
+        height: 300px;
+        width: 250px;
+        .card-header {
+            height: 100px;
+        }
+    }
+}
+
+.carousel-cell.is-selected {
     background: $color-pale;
-  }
-  
-  /* cell number */
-  .carousel-cell:before {
+}
+
+/* cell number */
+.carousel-cell:before {
     display: block;
     text-align: center;
     line-height: 200px;
     font-size: 80px;
     color: white;
-  }
+}
 
-  /* position dots up a bit */
+/* position dots up a bit */
 .flickity-page-dots {
-    bottom: 3px;
-  }
-  /* dots are lines */
-  .flickity-page-dots .dot {
+    bottom: 5px;
+}
+/* dots are lines */
+.flickity-page-dots .dot {
     height: 4px;
-    width: 40px;
+    width: 30px;
     margin: 0;
     border-radius: 0;
-  }
+}

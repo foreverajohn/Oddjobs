@@ -5,17 +5,18 @@
         
         <!-- Required meta tags always come first -->
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     
         <!-- build:css css/main.css -->
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+        <link rel="stylesheet" type="text/html" href="node_modules/bootstrap-social/bootstrap-social.css" />
         <link rel="stylesheet" href="node_modules/flickity/css/flickity.css" media="screen">
         <link rel="stylesheet" href="css/styles.css" />
         <!-- endbuild -->
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+        <script src="https://kit.fontawesome.com/27739c7b16.js" crossorigin="anonymous"></script>
         <title>Oddjobs: Get it done!</title>
 
     </head>
@@ -102,7 +103,11 @@
                                     <label for="postDescription" class="col-12 col-form-label">Describe your need/offer</label>
                                     <div class="col-12">
                                         <textarea class="form-control" id="postDescription" name="postDescription" rows="4"></textarea>
-                                    </div>    
+                                        <label for="paygrade" class="col-12 col-form-label">How much are you willing to pay?</label>
+                                        <input type="number" name="paygrade" id="Demo" class="rating hidden" data-clearable="remove" data-icon-lib="fa" data-active-icon="fa-circle" data-inactive-icon="fa-circle-o"/>
+                                        <label for="urgency" class="col-12 col-form-label">How urgent is your need?</label>
+                                        <input type="number" name="paygrade" id="Demo" class="rating hidden" data-clearable="remove" data-icon-lib="fa" data-active-icon="fa-circle" data-inactive-icon="fa-circle-o"/>
+                                    </div>   
                                 </div>
                                 <div class="form-group row">
                                     <div class="col text-right">
@@ -120,13 +125,15 @@
         <header class="jumbotron jumbotron-fluid">
             <form class="form">
                 <div class="form-group row align-self-center">
-                    <label for="inputSearch" class="col-5 text-right" id="title">I </label>
-                    <select class="col-2 custom-select" id="inputSearch" name="inputSearch" class="form-control">
-                        <option disabled selected hidden>Need/Offer</option>
-                        <option>Need</option>
-                        <option>Offer</option>
-                    </select>
-                    <label class="col-5 text-left" for="inputSearch"  id="title"> help with:</label>
+                    <div class="col text-center">
+                        <label for="searchOption" class="text-right" id="title">I </label>
+                        <select class="custom-select custom select-sm d-inline" id="searchOption" name="searchOption" class="form-control">
+                            <option disabled selected hidden>Need/Offer</option>
+                            <option>Need</option>
+                            <option>Offer</option>
+                        </select>
+                        <label class="text-left" for="inputSearch"  id="title"> help with:</label>
+                    </div>
                 </div>
                 <div class="form-group row align-self-center">
                     <div class="col-6 mx-auto">
@@ -136,186 +143,450 @@
             </form>
         </header>
 
-        
-        <div class="container mx-auto text-center"><h2>What's in Need</h2></div>
-        <div class="needCarousel mb-3 py-3" data-flickity='{ "groupCells": true }'>
-            <div class="carousel-cell">
-                <div class="card">
-                    <div class="card-header">
-                        <h5><a href="post.html">Plumber needed!</a></h5>
-                        <p class="text-muted">by <a href="#">mar1o360</a></p>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text text-justify">Need some help fixing a couple of leaks under my kitchen sink. Will pay more if you come now!</p>
-                    </div>
-                    <footer class="card-footer">    
-                        <p class="card-text"><small class="text-muted">U: <i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i> P: <i class="fa fa-usd" aria-hidden="true"></i> 3 mins ago</small></p>
-                    </footer>
-                </div>
-            </div>
-            <div class="carousel-cell">
-                <div class="card">
-                    <div class="card-header">
-                        <h5><a href="#">Need help on house cleaning</a></h5>
-                        <p class="text-muted">by <a href="#">luigi420</a></p>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text text-justify">Selling some stuff around the house and I need some help doing some cleaning on the garage and basement.</p>
-                    </div>
-                    <footer class="card-footer">    
-                        <p class="card-text"><small class="text-muted">U: <i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i> P: <i class="fa fa-usd" aria-hidden="true"></i> 4 mins ago</small></p>
-                    </footer>
-                </div>
-            </div>
-            <div class="carousel-cell">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Card 1</h4>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 4 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-cell">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Card 1</h4>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-cell">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Card 1</h4>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-cell">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Card 1</h4>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-cell">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Card 1</h4>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-cell">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Card 1</h4>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container mx-auto text-center"><h2>What's in Offer</h2></div>
-        <div class="needCarousel mb-3 py-3" data-flickity='{ "groupCells": true }'>
-            <div class="carousel-cell">
-                <div class="card">
-                    <div class="card-header">
-                        <h5><a href="post.html">Plumber needed!</a></h5>
-                        <p class="text-muted">by <a href="#">mar1o360</a></p>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text text-justify">Need some help fixing a couple of leaks under my kitchen sink. Will pay more if you come now!</p>
-                    </div>
-                    <footer class="card-footer">    
-                        <p class="card-text"><small class="text-muted">U: <i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i> P: <i class="fa fa-usd" aria-hidden="true"></i> 3 mins ago</small></p>
-                    </footer>
-                </div>
-            </div>
-            <div class="carousel-cell">
-                <div class="card">
-                    <div class="card-header">
-                        <h5><a href="#">Need help on house cleaning</a></h5>
-                        <p class="text-muted">by <a href="#">luigi420</a></p>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text text-justify">Selling some stuff around the house and I need some help doing some cleaning on the garage and basement.</p>
-                    </div>
-                    <footer class="card-footer">    
-                        <p class="card-text"><small class="text-muted">U: <i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i> P: <i class="fa fa-usd" aria-hidden="true"></i> 4 mins ago</small></p>
-                    </footer>
-                </div>
-            </div>
-            <div class="carousel-cell">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Card 1</h4>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 4 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-cell">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Card 1</h4>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-cell">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Card 1</h4>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-cell">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Card 1</h4>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-cell">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Card 1</h4>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-cell">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Card 1</h4>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-6 text-center">
-                    <h2>Featured Oddjobbers</h2>
+                <div class="col text-center">
+                    <h2>What's in Need</h2>
+                    <div class="needCarousel mb-3 py-3" data-flickity='{ "groupCells": true }'>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title" ><a href="post.html">Plumber needed!</a></h5>
+                                    <p class="text-muted">by <a href="#">mar1o360</a></p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-justify">Need some help fixing a couple of leaks under my kitchen sink. Will pay more if you come now!</p>
+                                </div>
+                                <footer class="card-footer">    
+                                    <p class="card-text"><small class="text-muted">U: <i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i> P: <i class="fa fa-usd" aria-hidden="true"></i> 3 mins ago</small></p>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title"><a href="#">Need help on house cleaning</a></h5>
+                                    <p class="text-muted">by <a href="#">luigi420</a></p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-justify">Selling some stuff around the house and I need some help doing some cleaning on the garage and basement.</p>
+                                </div>
+                                <footer class="card-footer">    
+                                    <p class="card-text"><small class="text-muted">U: <i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i> P: <i class="fa fa-usd" aria-hidden="true"></i> 4 mins ago</small></p>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title"><a href="#">Help wanted in restaurant</a></h5>
+                                    <p class="text-muted">by <a href="#">war1onum1</a></p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-justify">Need an extra hand waiting tables for the weekend</p>
+                                </div>
+                                <footer class="card-footer">    
+                                    <p class="card-text"><small class="text-muted">U: <i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i> P: <i class="fa fa-usd" aria-hidden="true"></i> 10 mins ago</small></p>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title"><a href="#">Dogsitter in need</a></h5>
+                                    <p class="text-muted">by <a href="#">princezpe4ch</a></p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-justify">In need of someone to help me keeping an eye on my dog next week, going on a trip.</p>
+                                </div>
+                                <footer class="card-footer">    
+                                    <p class="card-text"><small class="text-muted">U: <i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i> P: <i class="fa fa-usd" aria-hidden="true"></i> 4 mins ago</small></p>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title"><a href="#">Babysitter for the night</a></h5>
+                                    <p class="text-muted">by <a href="#">rosal1na777</a></p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-justify">Going out on a date tonight, need someone wanting to earn a bit of cash watching my son this evening.</p>
+                                </div>
+                                <footer class="card-footer">    
+                                    <p class="card-text"><small class="text-muted">U: <i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i> P: <i class="fa fa-usd" aria-hidden="true"></i> 20 mins ago</small></p>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title"><a href="#">Mechanic in demand</a></h5>
+                                    <p class="text-muted">by <a href="#">t04dguy46</a></p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-justify">My car jus broke down on me on the driveway, need a mechanic ASAP for a quick fix</p>
+                                </div>
+                                <footer class="card-footer">    
+                                    <p class="card-text"><small class="text-muted">U: <i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i> P: <i class="fa fa-usd" aria-hidden="true"></i> 30 mins ago</small></p>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title"><a href="#">Designated driver for the night</a></h5>
+                                    <p class="text-muted">by <a href="#">y0shiman32</a></p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-justify">Friends and I are getting smashed tonight, need someone to drive us around for a quick buck.</p>
+                                </div>
+                                <footer class="card-footer">    
+                                    <p class="card-text"><small class="text-muted">U: <i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i> P: <i class="fa fa-usd" aria-hidden="true"></i> 35 mins ago</small></p>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title"><a href="#">Painter in need</a></h5>
+                                    <p class="text-muted">by <a href="#">l1nkdude360</a></p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-justify">Doing some remodelling around the house, need a hand with the painting on some rooms. Good pay if you work well.</p>
+                                </div>
+                                <footer class="card-footer">    
+                                    <p class="card-text"><small class="text-muted">U: <i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i> P: <i class="fa fa-usd" aria-hidden="true"></i> 40 mins ago</small></p>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title"><a href="#">Electrician for the weekend</a></h5>
+                                    <p class="text-muted">by <a href="#">dkaykong999</a></p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-justify">Need a hand with someone who can install new power outlets on my mancave</p>
+                                </div>
+                                <footer class="card-footer">    
+                                    <p class="card-text"><small class="text-muted">U: <i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i> P: <i class="fa fa-usd" aria-hidden="true"></i> 45 mins ago</small></p>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title"><a href="#">Gardener ASAP</a></h5>
+                                    <p class="text-muted">by <a href="#">piranh4planter</a></p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-justify">Help me with my plants this weekend and get paid</p>
+                                </div>
+                                <footer class="card-footer">    
+                                    <p class="card-text"><small class="text-muted">U: <i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i><i class="fa fa-exclamation" aria-hidden="true"></i> P: <i class="fa fa-usd" aria-hidden="true"></i> 50 mins ago</small></p>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-6 text-center">
+            </div>  
+            <div class="row">
+                <div class="col text-center">
+                    <h2>What's in Offer</h2>
+                    <div class="offerCarousel mb-3 py-3" data-flickity='{ "groupCells": true }'>
+                        <div class="carousel-cell">
+                            <div class="card" id="post1">
+                                <div class="card-header">
+                                    <h5 class="card-title" ><a href="post.html">Sitter available</a></h5>
+                                    <p class="text-muted">by <a href="#">zeld4mum</a></p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-justify">I am a sitter offering my services for anytime during this week.</p>
+                                </div>
+                                <footer class="card-footer">    
+                                    <p class="card-text"><small class="text-muted">P: <i class="fa fa-usd" aria-hidden="true"></i> 3 mins ago</small></p>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5><a href="#">Dog Hairstyler offer services</a></h5>
+                                    <p class="text-muted">by <a href="#">bigboobarbers</a></p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-justify">Does your dog need a trim? Call me and we can set an appointment!</p>
+                                </div>
+                                <footer class="card-footer">    
+                                    <p class="card-text"><small class="text-muted"> P: <i class="fa fa-usd" aria-hidden="true"></i> 4 mins ago</small></p>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5><a href="#">Chef looking for a sidegig</a></h5>
+                                    <p class="text-muted">by <a href="#">bowsercook</a></p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-justify">Have a dinner party and don't want to cook yourself? I'm available this weekend for bookings.</p>
+                                </div>
+                                <footer class="card-footer">    
+                                    <p class="card-text"><small class="text-muted"> P: <i class="fa fa-usd" aria-hidden="true"></i><i class="fa fa-usd" aria-hidden="true"></i><i class="fa fa-usd" aria-hidden="true"></i> 4 mins ago</small></p>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5><a href="#">The Landscape professional you need</a></h5>
+                                    <p class="text-muted">by <a href="#">diddykang35</a></p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-justify">15 years of experience in landscaping and gardening. Free estimates, up your garden game with the best!</p>
+                                </div>
+                                <footer class="card-footer">    
+                                    <p class="card-text"><small class="text-muted"> P: <i class="fa fa-usd" aria-hidden="true"></i><i class="fa fa-usd" aria-hidden="true"></i><i class="fa fa-usd" aria-hidden="true"></i> 4 mins ago</small></p>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 pt-3 text-center">
+                    <h2>Featured Oddjobbers</h2>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card mt-3">
+                                <div class="card-header">
+                                    <h5>Exquisite hand henna tattoo</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="image"> 
+                                        <img src="https://i.imgur.com/0LKZQYM.jpg" class="rounded-circle" width="60" /> 
+                                    </div>
+                                    <div class="card-text"> 
+                                        <span>@hairtaje</span>
+                                        <div class="ratings ml-2"> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star-o"></i> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer"> 
+                                    <a type="button" class="btn btn-outline-dark btn-sm m-1">See Profile</a> 
+                                    <a type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa fa-comment-o"></i></a> 
+                                    <button class="btn btn-primary btn-block mt-2"><i class="fa fa-clock-o"></i> Book Now</button>                               
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card mt-3">
+                                <div class="card-header">
+                                    <h5>Exquisite hand henna tattoo</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="image"> 
+                                        <img src="https://i.imgur.com/0LKZQYM.jpg" class="rounded-circle" width="60" /> 
+                                    </div>
+                                    <div class="card-text"> 
+                                        <span>@hairtaje</span>
+                                        <div class="ratings ml-2"> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star-o"></i> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer"> 
+                                    <a type="button" class="btn btn-outline-dark btn-sm m-1">See Profile</a> 
+                                    <a type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa fa-comment-o"></i></a> 
+                                    <button class="btn btn-primary btn-block mt-2"><i class="fa fa-clock-o"></i> Book Now</button>                               
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card mt-3">
+                                <div class="card-header">
+                                    <h5>Exquisite hand henna tattoo</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="image"> 
+                                        <img src="https://i.imgur.com/0LKZQYM.jpg" class="rounded-circle" width="60" /> 
+                                    </div>
+                                    <div class="card-text"> 
+                                        <span>@hairtaje</span>
+                                        <div class="ratings ml-2"> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star-o"></i> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer"> 
+                                    <a type="button" class="btn btn-outline-dark btn-sm m-1">See Profile</a> 
+                                    <a type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa fa-comment-o"></i></a> 
+                                    <button class="btn btn-primary btn-block mt-2"><i class="fa fa-clock-o"></i> Book Now</button>                               
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card mt-3">
+                                <div class="card-header">
+                                    <h5>Exquisite hand henna tattoo</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="image"> 
+                                        <img src="https://i.imgur.com/0LKZQYM.jpg" class="rounded-circle" width="60" /> 
+                                    </div>
+                                    <div class="card-text"> 
+                                        <span>@hairtaje</span>
+                                        <div class="ratings ml-2"> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star-o"></i> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer"> 
+                                    <a type="button" class="btn btn-outline-dark btn-sm m-1">See Profile</a> 
+                                    <a type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa fa-comment-o"></i></a> 
+                                    <button class="btn btn-primary btn-block mt-2"><i class="fa fa-clock-o"></i> Book Now</button>                               
+                                </div>
+                            </div>
+                        </div>
+                    </div>           
+                </div>
+                <div class="col-sm-6 pt-3 text-center">
                     <h2>Featured Clients</h2>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card mt-3">
+                                <div class="card-header">
+                                    <h5>Exquisite hand henna tattoo</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="image"> 
+                                        <img src="https://i.imgur.com/0LKZQYM.jpg" class="rounded-circle" width="60" /> 
+                                    </div>
+                                    <div class="card-text"> 
+                                        <span>@hairtaje</span>
+                                        <div class="ratings ml-2"> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star-o"></i> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer"> 
+                                    <a type="button" class="btn btn-outline-dark btn-sm m-1">See Profile</a> 
+                                    <a type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa fa-comment-o"></i></a> 
+                                    <button class="btn btn-primary btn-block mt-2"><i class="fa fa-clock-o"></i> Book Now</button>                               
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card mt-3">
+                                <div class="card-header">
+                                    <h5>Exquisite hand henna tattoo</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="image"> 
+                                        <img src="https://i.imgur.com/0LKZQYM.jpg" class="rounded-circle" width="60" /> 
+                                    </div>
+                                    <div class="card-text"> 
+                                        <span>@hairtaje</span>
+                                        <div class="ratings ml-2"> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star-o"></i> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer"> 
+                                    <a type="button" class="btn btn-outline-dark btn-sm m-1">See Profile</a> 
+                                    <a type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa fa-comment-o"></i></a> 
+                                    <button class="btn btn-primary btn-block mt-2"><i class="fa fa-clock-o"></i> Book Now</button>                               
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card mt-3">
+                                <div class="card-header">
+                                    <h5>Exquisite hand henna tattoo</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="image"> 
+                                        <img src="https://i.imgur.com/0LKZQYM.jpg" class="rounded-circle" width="60" /> 
+                                    </div>
+                                    <div class="card-text"> 
+                                        <span>@hairtaje</span>
+                                        <div class="ratings ml-2"> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star-o"></i> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer"> 
+                                    <a type="button" class="btn btn-outline-dark btn-sm m-1">See Profile</a> 
+                                    <a type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa fa-comment-o"></i></a> 
+                                    <button class="btn btn-primary btn-block mt-2"><i class="fa fa-clock-o"></i> Book Now</button>                               
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card mt-3">
+                                <div class="card-header">
+                                    <h5>Exquisite hand henna tattoo</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="image"> 
+                                        <img src="https://i.imgur.com/0LKZQYM.jpg" class="rounded-circle" width="60" /> 
+                                    </div>
+                                    <div class="card-text"> 
+                                        <span>@hairtaje</span>
+                                        <div class="ratings ml-2"> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star-o"></i> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer"> 
+                                    <a type="button" class="btn btn-outline-dark btn-sm m-1">See Profile</a> 
+                                    <a type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa fa-comment-o"></i></a> 
+                                    <button class="btn btn-primary btn-block mt-2"><i class="fa fa-clock-o"></i> Book Now</button>                               
+                                </div>
+                            </div>
+                        </div>
+                    </div>          
                 </div>
             </div>
         </div>
@@ -351,7 +622,8 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="node_modules/flickity/dist/flickity.pkgd.js"></script>
+        <script src="node_modules/bootstrap/js/src/bootstrap4-rating-input.js"></script>
+        <script src="node_modules/flickity/dist/flickity.pkgd.min.js"></script>
         <script src="js/scripts.js"></script>
         <!-- endbuild -->
 

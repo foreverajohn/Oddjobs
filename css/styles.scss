@@ -1,22 +1,58 @@
 $color-primary: #1A1B41;
-$color-secondary: #BAFF29;
+$color-secondary: #FFFFA5;
 $color-pale: #F1FFE7;
 $color-mid: #ffbf20;
 $color-dark: #0046a4;
-$color-black-transparent: rgba(0, 0, 0, 0.5);
+$color-black-transparent: rgba(206, 206, 206, 0.5);
 
 
-$body-font: "Open Sans", sans-serif;
-$header-font: "Lobster", cursive;
+$body-font: 'Roboto', sans-serif;
+$card-title-font: 'Roboto', sans-serif;
+$header-font: 'Permanent Marker', cursive;
 
 body {
     font-family: $body-font;
-    overflow-x: hidden;
 }
   
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: $header-font; 
 }
+
+nav {
+    div{
+        a{
+            font-family: $header-font;
+        }
+    }
+}
+
+header {
+    background-image: url("../img/handymans-apron.jpg");
+    background-position: center top;
+    background-size: cover;
+    .container{
+        #searchDiv {
+            background-color: $color-black-transparent;
+            border-radius: 10px;
+            padding: 40px 0px;
+            margin: 0px 50px;
+        }
+    }
+}
+
+@media screen and (min-width: 575px) {
+    #searchSelect {
+      font-size: 25px; 
+      span {
+        transform: scale(0.7);
+        margin: 0px -10px;
+        }       
+    }
+    #needAccordion, #offerAccordion {
+        padding: 0 120px; 
+    }
+}
+
 
 .navbar-dark {
     background-color: $color-dark;
@@ -33,8 +69,43 @@ h2 {
     color: $color-primary;
 }
 
-#title {
-    font-size: 25px;
+.modal-header {
+    background-color: $color-mid;
+}
+
+#searchSelect {
+    display: inline-block;
+    text-align: center;
+}
+  
+span {
+    display: inline-block;
+    white-space: nowrap;
+    width: 119px;
+    transform: scale(0.6);
+    margin: 0px -20px;
+}
+
+#bgrect, #bgrectMd {
+    position: relative;
+}
+
+#smrect, #smrectMd {
+    position: relative;
+    right: 115px;
+    z-index: 50;
+}
+
+#need, #needMd {
+    position: relative;
+    right: 161px;
+    z-index: 51;
+}
+
+#offer, #offerMd {
+    position: relative;
+    right: 140px;
+    z-index: 51;
 }
 
 .row-content {
@@ -44,45 +115,85 @@ h2 {
 
 .site-footer {
     margin-top: 20px;
-    background-color: #0046a4;
+    background-color: $color-dark;
     padding: 20px 0;
     color: $color-pale;
 }
 
-  
 .card-title, .card-subtitle {
     a {
         text-decoration: none;
+        font-family: $header-font;
+        color: $color-primary;
     }
-    
 }
 
-#searchOption {
-    width: 130px;
-}
-
-.needCarousel, .offerCarousel {
-    background: transparent;
-}
-  
-.carousel-cell {
-    width: 250px;
-    margin-right: 10px;
-    border-radius: 5px;
-    .card {
-        height: 300px;
-        width: 250px;
-        .card-header {
-            height: 100px;
+.card-header{
+    .text-muted {
+        a{
+            text-decoration: none;
+            color: $color-primary;
         }
     }
 }
 
-.carousel-cell.is-selected {
-    background: $color-pale;
+#needAccordion, #offerAccordion {
+    background-image: url("../img/cork.jpg");
+    background-size: cover;
+    border-radius: 3px;
+    border: 1px solid  lightgray;
+}
+  
+.carousel-cell {
+    width: 250px;
+    padding-right: 10px;
+    .gig-card {
+        border-radius: 5px;
+        border: 1px solid  lightgray;
+        height: 270px;
+        background: $color-secondary;
+        .card-title {
+            text-align: center;
+            height: auto;
+            padding: 10px;
+            position: relative;
+            top:25px;
+            }
+        .card-body {
+            text-align: justify;
+            padding: 10px 15px;
+        }
+        .card-footer {
+            position: absolute;
+            width: 240px;
+            bottom: 0;
+        }
+    }
 }
 
-/* cell number */
+.card {
+    border-radius: 3px;
+    min-height: 250px;
+    background: $color-black-transparent;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+    .card-header {
+        h4 {
+            font-size: 20px !important;
+        }
+    }
+    .card-body {
+        background-color: white;
+        img {
+            width: auto;
+            float: left;
+            margin: 5px 0px;
+        }
+        .card-text {
+            font-size: 15px;
+        }
+    }
+}
+
 .carousel-cell:before {
     display: block;
     text-align: center;
@@ -91,14 +202,39 @@ h2 {
     color: white;
 }
 
-/* position dots up a bit */
 .flickity-page-dots {
-    bottom: 5px;
-}
-/* dots are lines */
-.flickity-page-dots .dot {
+    bottom: -22px;
+  }
+
+  .flickity-page-dots .dot {
     height: 4px;
-    width: 30px;
+    width: 40px;
     margin: 0;
     border-radius: 0;
+  }
+
+.post-body{
+    float: right;
+}
+
+.title {
+    h2 {
+        text-align: left;
+    }
+    button {
+        position: absolute;
+        top: 16px;
+        right: 32px;
+    }
+}
+
+.user-meta {
+    display: flex;
+    .lead {
+        padding-left: 25px;
+        padding-top: 40px;
+    }
+    img {
+        display: block;
+    }
 }

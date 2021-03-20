@@ -73,24 +73,6 @@
             </div>
         </div>
 
-        <div id="offerModal" class="modal fade" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title">Are You Sure?</h3>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Your're about to offer your services. Are you sure?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary"data-dismiss="modal">Yes!</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div id="postModal" class="modal fade example-modal-lg" role="dialog">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -131,37 +113,102 @@
                 </div>
             </div>
         </div>
-
-        <div class="container">
+        
+        <div class="container mt-5">
             <div class="row">
-                <div class="col">
-                    <div class="title pt-3">
-                        <h1>Plumber needed!</h1>
-                    </div>    
-                    <div class="user-meta">
-                        <img src="img/daisy.jpg" class="rounded-circle" width="100"><p class="lead">Posted by <a href="#">Daisy Romero</a></p>
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <img src="img/mario.jpg" class="rounded-circle" height="80">
+                                <div class="mt-3">
+                                    <h4>Mario Lamberti</h4>
+                                    <p class="text-secondary mb-1">Plumber and Handyman</p>
+                                    <p class="text-muted font-size-sm">320 Dire Docks, Mushroom Kingdom</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-10 pr-6 pt-5 align-self-end">
-                    <p>Need some help fixing a couple of leaks under my kitchen sink. Will pay more if you come now!</p>
-                    <p class="text-muted">Posted on March 17, 2021 at 12:00 PM</p>   
-                    <button type="button" class="btn btn-primary mb-5" data-toggle="modal" data-target="#offerModal">Offer to help!</button>
-                    <hr>         
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-10 pt-5">
-                    <form>
-                        <div class="form-group">
-                            <label><h5>Ask something:</h5></label>
-                            <textarea class="form-control" rows="3" placeholder="Say something"></textarea>
-                            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                <div class="col-md-8">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Full Name</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    Mario Lamberti
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Email</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    mario@plumbersllc.com
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Phone</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    (239) 816-9029
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Oddjobs Score</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <i class="fa fa-star"></i> 
+                                    <i class="fa fa-star"></i> 
+                                    <i class="fa fa-star"></i> 
+                                    <i class="fa fa-star"></i> 
+                                    <i class="fa fa-star"></i> 
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Address</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    320 Dire Docks, Mushroom Kingdom
+                                </div>
+                            </div>
                         </div>
-                    </form>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-3">
+                            <div class="card h-100">
+                                <h5 class="card-header">Leave a Comment:</h5>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-group">
+                                          <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                      </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media my-4">
+                        <img class="d-flex mr-3 rounded-circle" src="img/rosalina.png" height="64" alt="">
+                        <div class="media-body">
+                          <h5 class="mt-0">Rosalina Munoz</h5>
+                          Mario is a great plumber, I'd recommend him any day!
+                        </div>
+                      </div>
                 </div>
-            </div> 
+            </div>      
         </div>
-
+    
         <footer class="site-footer">
             <div class="container">
                 <div class="row">    
@@ -175,7 +222,7 @@
                 </div>
             </div>
         </footer>
-    
+
         <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
         <!-- build:js js/main.js -->
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
